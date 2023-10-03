@@ -2,8 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="azul">#150d32</color>
-    <color name="azulClaro">#000080</color>
-    <color name="azulBb">#bfddf3</color>
-
+    <color name="amareloEscuro">#E09A32</color>
+    <color name="amareloClaro">#E0CF32</color>
+    <color name="marrom">#81581B</color>
+    <color name="azulBb">#0E668C</color>
+    <color name="cinza">#DADADA</color>
+    <color name="AmareloClarissimo">#ffff9e</color>
 </resources>
