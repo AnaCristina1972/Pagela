@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Avaliacao_Inicial">
@@ -10,49 +14,534 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="100dp"
-        android:paddingTop="40dp"
+        android:paddingTop="5dp"
         android:src="@drawable/menus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-
-    <View
-        android:id="@+id/view"
-        style="@style/ContainerComponents1"
-        app:layout_constraintBaseline_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="242dp"
-        android:layout_height="140dp"
-        android:paddingTop="40dp"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:paddingTop="28dp"
         android:src="@drawable/img_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ScrollView
-        android:layout_width="15dp"
-        android:layout_height="0dp"
+    <TextView
+        android:id="@+id/ViewAvaliacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Avaliação inicial"
+        android:textColor="@color/marrom"
+        android:textSize="29dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-    </ScrollView>
+    <View
+        android:id="@+id/ContainerComponents1"
+        style="@style/ContainerComponents1"
+        android:layout_width="410dp"
+        android:layout_height="935dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ViewAvaliacao"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/TextoQuest1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="1. Você sente uma preocupação excessiva ou ansiedade em relação a situações específicas?"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toTopOf="@+id/ContainerComponents1"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Sim"
+        android:textColor="@color/black"
+        android:textSize="9dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1_2"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="452dp"
+        android:gravity="center"
+        android:text="Não"
+        android:textColor="@color/black"
+        android:textSize="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest1"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/TextoQuest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="2. Com que frequência você experimenta sentimentos de ansiedade? É um sentimento constante ou ocorre em episódios agudos?"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest2"
+        style="@style/Button_resposta"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Costante"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest2"
+        style="@style/Button_resposta"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Agudos"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest2"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest2"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <TextView
+        android:id="@+id/TextoQuest3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="3. Quanto tempo você tem sentido esses sintomas de ansiedade? Isso é algo recente ou tem sido uma preocupação de longa data?"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1Quest2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest3"
+        style="@style/Button_resposta"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Recente"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest3"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest3"
+        style="@style/Button_resposta"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="longa data"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest2"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest3"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <TextView
+        android:id="@+id/TextoQuest4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="4. Você experimenta sintomas físicos quando está ansioso, como palpitações, sudorese, tremores, dores no peito, falta de ar ou náuseas?"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1Quest3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest4"
+        style="@style/Button_resposta"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Constante"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest4"
+        style="@style/Button_resposta"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Agudo"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest4"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest4"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/TextoQuest5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="5. Você já teve ataques de pânico?
+"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest4"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1Quest4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest5"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Sim"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest5"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Não"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest4"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest5"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/TextoQuest6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="6. A ansiedade afeta seu dia a dia, incluindo sua capacidade de trabalhar, estudar, socializar e realizar tarefas cotidianas?
+"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest5"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1Quest5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest6"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Sim"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest6"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Não"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest6"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest6"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/TextoQuest7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="7. Existem situações ou eventos passados que podem ter desencadeado ou contribuído para seus níveis de ansiedade?
+"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest6"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1Quest6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest7"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Sim"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest7"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Não"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest6"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest7"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/TextoQuest8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="8. Você tem alguma história familiar de transtornos de ansiedade ou outros problemas de saúde mental? "
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1Quest7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest8"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Sim"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest8"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Não"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest8"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest8"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/TextoQuest9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="9. Você está tomando alguma medicação ou fazendo algum tratamento para a ansiedade atualmente? "
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextoQuest8"
+        app:layout_constraintTop_toBottomOf="@+id/buttonresp1Quest8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp1Quest9"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Sim"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@+id/ContainerComponents1"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest9"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/buttonresp2Quest9"
+        style="@style/Button_resposta"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:text="Não"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContainerComponents1"
+        app:layout_constraintEnd_toEndOf="@+id/ContainerComponents1"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toEndOf="@+id/buttonresp1Quest9"
+        app:layout_constraintTop_toBottomOf="@+id/TextoQuest9"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>

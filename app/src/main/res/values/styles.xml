@@ -9,10 +9,9 @@
 </style>
 
     <style name="ContainerComponents1">
-    <item name="android:layout_width" >wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width" >match_parent</item>
+    <item name="android:layout_height">250dp</item>
     <item name="android:background">@drawable/conteiner_componentes1</item>
-    <item name="android:layout_margin">20dp</item>
         <item name="android:color">@color/AmareloClarissimo</item>
     </style>
     
@@ -21,16 +20,42 @@
         <item name="android:layout_width" >match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+    <style name="Button">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:layout_width" >match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+    <style name="Button_resposta">
+        <item name="android:background">@drawable/resposta_avaliacao</item>
+        <item name="android:layout_width" >wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">110px</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">5px</item>
+    </style>
 
     <style name="Edit_Text">
-        <item name="android:color">@color/black</item>
         <item name="android:layout_width" >match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/edit_text</item>
         <item name="android:padding">20dp</item>
         <item name="layout_goneMarginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:maxLength">25</item>
+    </style>
+    <style name="Edit_Text1">
+        <item name="android:layout_width" >match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text1</item>
+        <item name="android:padding">20dp</item>
+        <item name="layout_goneMarginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:maxLength">25</item>
     </style>
 
 </resources>
