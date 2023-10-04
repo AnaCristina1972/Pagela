@@ -18,7 +18,7 @@ TextView textoCadastre;
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(TelaLogin.this,Tela_Perfil_Paciente.class);
+                Intent intent=new Intent(TelaLogin.this,Avaliacao_Inicial.class);
                 startActivity(intent);
                 finish();
             }
