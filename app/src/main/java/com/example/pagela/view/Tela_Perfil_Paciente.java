@@ -1,21 +1,20 @@
-package com.example.pagela;
+package com.example.pagela.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.pagela.R;
+
 public class Tela_Perfil_Paciente extends AppCompatActivity {
-Button button;
+
+    Button button,voltar,sair;
     ImageView imgem;
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -23,8 +22,10 @@ Button button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_perfil_paciente);
+        getSupportActionBar().hide();
         button=(Button) findViewById(R.id.imageButton);
         imgem=(ImageView) findViewById(R.id.imageView2);
+        iniciarComponentes();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +33,14 @@ Button button;
                 startActivityForResult(Intent.createChooser(intent,"Galeria"),1);
             }
         });
+
+        sair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Tela_Perfil_Paciente.this.finish();
+            }
+        });
+
 
     }
     protected  void onActivityResult(int RequestCode,int ResultCode,Intent dados) {
@@ -43,6 +52,11 @@ Button button;
 
         }
 
+
+    }
+    private void iniciarComponentes(){
+        Button voltar = (Button) findViewById(R.id.Button_voltarLogin);
+        Button sair = (Button) findViewById(R.id.Button_sairLogin);
     }
     public  void notificacao(){
 

@@ -12,7 +12,54 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        tools:context=".Tela_Cadastro_Paciente">
+        tools:context=".view.Tela_Cadastro_Paciente">
+
+        <EditText
+            android:id="@+id/idade"
+            style="@style/Edit_Text1"
+            android:layout_width="350dp"
+            android:layout_height="73dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Data do Nascimento"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.572"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadTextCpf"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/cadTextDataIdade"
+            style="@style/Edit_Text1"
+            android:layout_width="350dp"
+            android:layout_height="73dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Idade"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.588"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idade"
+            app:layout_constraintVertical_bias="0.012" />
+
+        <EditText
+            android:id="@+id/cadTextNome2"
+            style="@style/Edit_Text1"
+            android:layout_width="350dp"
+            android:layout_height="73dp"
+            android:layout_marginBottom="300dp"
+            android:ems="10"
+            android:hint="Nome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.573"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOrientacao"
+            app:layout_constraintVertical_bias="0.021"
+
+            />
 
         <TextView
             android:id="@+id/identAppSaudeMental"
@@ -55,7 +102,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo1"
-            app:layout_constraintVertical_bias="0.013" />
+            app:layout_constraintVertical_bias="0.015" />
 
         <TextView
             android:id="@+id/textOrientacao"
@@ -67,7 +114,6 @@
             Crie uma senha e registre uma conta de e-mail. "
             android:textAlignment="center"
             android:textColor="@color/black"
-
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textIdent"
@@ -75,7 +121,6 @@
             app:layout_constraintStart_toStartOf="@+id/textIdent"
             app:layout_constraintTop_toBottomOf="@+id/textIdent"
             app:layout_constraintVertical_bias="0.013" />
-
 
         <EditText
             android:id="@+id/cadTextNome"
@@ -93,6 +138,7 @@
             app:layout_constraintVertical_bias="0.021"
 
             />
+
 
         <EditText
             android:id="@+id/cadTextEmail"
@@ -128,27 +174,27 @@
             android:layout_width="350dp"
             android:layout_height="73dp"
             android:layout_marginTop="24dp"
+            android:layout_marginBottom="116dp"
             android:hint="Senha"
             android:inputType="textPassword"
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
+            app:layout_constraintHorizontal_bias="0.636"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cadTextCpf"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/cadTextDataIdade" />
 
         <EditText
             android:id="@+id/cadTexConfirmarSenha"
             style="@style/Edit_Text1"
             android:layout_width="350dp"
             android:layout_height="73dp"
-            android:layout_marginBottom="576dp"
+            android:layout_marginBottom="136dp"
             android:hint="Confirmar Senha"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/textCadastre"
+            app:layout_constraintEnd_toEndOf="@+id/cadTexSenha"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cadTexSenha" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
@@ -161,10 +207,10 @@
             android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cadTexConfirmarSenha"
-            app:layout_constraintVertical_bias="0.04" />
+            app:layout_constraintVertical_bias="0.037" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -174,25 +220,24 @@
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textCadastre"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textCadastre"
             style="@style/Text_View"
             android:layout_width="267dp"
             android:layout_height="59dp"
+            android:layout_marginBottom="172dp"
             android:text="@string/textTermoContrato"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button"
-            app:layout_constraintVertical_bias="0.019" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tela_Perfil_Paciente">
+    tools:context=".view.Tela_Perfil_Paciente">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="557dp"
+        android:layout_height="405dp"
         android:layout_marginTop="100dp"
         android:background="#DADADA">
 
@@ -19,16 +19,17 @@
             android:layout_height="280dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintHorizontal_bias="0.587"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.133" />
+            app:layout_constraintVertical_bias="0.05" />
 
         <View
             android:id="@+id/viewCirciloImage"
             style="@style/componeteCircle"
             android:layout_width="148dp"
             android:layout_height="151dp"
+            android:background="@drawable/circle_perfil"
             app:layout_constraintBottom_toBottomOf="@+id/viewFotoPerfil"
             app:layout_constraintEnd_toEndOf="@+id/viewFotoPerfil"
             app:layout_constraintHorizontal_bias="0.59"
@@ -38,39 +39,30 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="148dp"
-            android:layout_height="152dp"
+            android:layout_width="98dp"
+            android:layout_height="84dp"
             android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="@+id/viewCirciloImage"
             app:layout_constraintEnd_toEndOf="@+id/viewCirciloImage"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.58"
             app:layout_constraintStart_toStartOf="@+id/viewCirciloImage"
             app:layout_constraintTop_toTopOf="@+id/viewCirciloImage"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.492"
             app:srcCompat="@drawable/img_8" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
             android:foregroundGravity="bottom"
             android:text="Foto"
             android:textColor="@color/black"
             android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/viewDadosPerfil"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.538"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewFotoPerfil"
             app:layout_constraintVertical_bias="0.142" />
-
-        <View
-            android:id="@+id/viewDadosPerfil"
-            style="@style/ContainerComponents"
-            android:layout_width="398dp"
-            android:layout_height="212dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="399dp" />
 
         <TextView
             android:id="@+id/id_nome_user_fotoPerfil"
@@ -86,48 +78,6 @@
             app:layout_constraintTop_toBottomOf="@+id/viewCirciloImage"
             app:layout_constraintVertical_bias="0.552" />
 
-        <TextView
-            android:id="@+id/id_nome_user"
-            style="@style/Text_View"
-            android:layout_width="116dp"
-            android:layout_height="32dp"
-            android:text="@string/dadosPessoaisPaciente"
-            android:textSize="22dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/viewDadosPerfil"
-            app:layout_constraintHorizontal_bias="0.842"
-            app:layout_constraintStart_toEndOf="@+id/id_nom_user"
-            app:layout_constraintTop_toTopOf="@+id/viewDadosPerfil"
-            app:layout_constraintVertical_bias="0.114" />
-
-        <TextView
-            android:id="@+id/id_nome_uer"
-            style="@style/Text_View"
-            android:layout_width="204dp"
-            android:layout_height="32dp"
-            android:text="Nome do paciente"
-            android:textSize="22dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/viewDadosPerfil"
-            app:layout_constraintHorizontal_bias="0.079"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/id_nom_user"
-            app:layout_constraintVertical_bias="0.18" />
-
-        <TextView
-            android:id="@+id/id_nom_user"
-            style="@style/Text_View"
-            android:layout_width="204dp"
-            android:layout_height="32dp"
-            android:text="@string/Nome_Tipo_Perfil"
-            android:textSize="22dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/viewDadosPerfil"
-            app:layout_constraintHorizontal_bias="0.065"
-            app:layout_constraintStart_toStartOf="@+id/viewDadosPerfil"
-            app:layout_constraintTop_toTopOf="@+id/viewDadosPerfil"
-            app:layout_constraintVertical_bias="0.114" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -135,5 +85,27 @@
         android:layout_height="40dp"
         android:paddingTop="5dp"
         android:src="@drawable/menus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_voltarLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginLeft="150dp"
+        android:text="Volta"
+        android:background="@color/marrom"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_sairLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="700dp"
+        android:background="@color/marrom"
+        android:text="Sair"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
 
 </androidx.cardview.widget.CardView>

@@ -8,7 +8,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Avaliacao_Inicial">
+    tools:context=".view.Avaliacao_Inicial">
 
 
     <ImageView
@@ -59,6 +59,7 @@
         android:layout_width="410dp"
         android:layout_height="935dp"
         android:layout_marginTop="8dp"
+        android:background="@color/cinza"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
