@@ -8,13 +8,15 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="472dp"
+        android:background="#DADADA"
+        android:layout_marginTop="100dp">
 
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
-            android:layout_height="258dp"
+            android:layout_height="240dp"
             android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +25,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.247"
             app:srcCompat="@drawable/img_8" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageButton"
@@ -38,4 +41,10 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:layout_constraintVertical_bias="0.043" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/menus" />
 </androidx.cardview.widget.CardView>
