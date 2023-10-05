@@ -11,4 +11,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="textTermoContrato">"Ao se cadastrar você estará concordando com os termos de contrato do App."</string>
     <string name="identificaoLogo">"App Saúde Mental"</string>
+    <string name="NomeUserFotoPerfil">Nome do Usuario</string>
+    <string name="Nome_Tipo_Perfil">Paciente</string>
+    <string name="dadosPessoaisPaciente">Dados Pessoai</string>
 </resources>
