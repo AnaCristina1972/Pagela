@@ -17,8 +17,8 @@ import com.google.android.material.snackbar.Snackbar;
 public class MainActivity extends AppCompatActivity {
     Paciente obj;
     PacienteController pac=new PacienteController(getApplicationContext());
-    private EditText nome,email,cpf,datanasc,idade,senha, senha2;
-    Button cadastra;
+   private EditText edite_idede,edite_nome,edite_cpf,edite_dataNascimento,edite_senha,edite_senha2,edite_email;
+   private Button criar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,13 +52,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
         private void iniciarComponentes(){
-            nome = (EditText) findViewById(R.id.cadTextNome);
-            email = (EditText) findViewById(R.id.editTextEmail);
-            cpf = (EditText) findViewById(R.id.cadTextNome);
-            datanasc = (EditText) findViewById(R.id.editTextEmail);
-            idade = (EditText) findViewById(R.id.cadTextNome);
-            senha = (EditText) findViewById(R.id.editTextEmail);
-            senha2 = (EditText) findViewById(R.id.cadTextNome);
+           edite_nome=(EditText) findViewById(R.id.cadTextNome);
+        edite_cpf=(EditText) findViewById(R.id.cadTextCpf);
+        edite_idede=(EditText) findViewById(R.id.idade);
+        edite_dataNascimento=(EditText) findViewById(R.id.cadTextDataIdade);
+        edite_email=(EditText) findViewById(R.id.cadTextEmail);
+        edite_senha=(EditText) findViewById(R.id.cadTexSenha);
+        edite_senha2=(EditText) findViewById(R.id.cadTextNome2);
+        criar=(Button) findViewById(R.id.buttonCriar);
 
         }
     }
