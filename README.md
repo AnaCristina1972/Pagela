@@ -7,5 +7,5 @@ App com o objetivo de proporcionar aos usuários uma ferramenta para melhorar su
 
 ## Pessoas Contribuidoras
 
-|  [<img src="[https://avatars.githubusercontent.com/u/55546267?v=4]" width=115><br><sub>Ana Cristina</sub>]([https://github.com/priscilafraser](https://github.com/AnaCristina1972)) | [<img src="" width=115><br><sub>Icaro Gama</sub>]() |  [<img src="https://avatars.githubusercontent.com/u/55546267?v=4" width=115><br><sub>Priscila Miranda</sub>](https://github.com/priscilafraser) |
+|  [<img src="https://avatars.githubusercontent.com/u/88814404?v=4" width=115><br><sub>Ana Cristina</sub>](https://github.com/AnaCristina1972) | [<img src="[]" width=115><br><sub>Icaro Gama</sub>]() |  [<img src="https://avatars.githubusercontent.com/u/55546267?v=4" width=115><br><sub>Priscila Miranda</sub>](https://github.com/priscilafraser) |
 | :---: | :---: | :---: |
