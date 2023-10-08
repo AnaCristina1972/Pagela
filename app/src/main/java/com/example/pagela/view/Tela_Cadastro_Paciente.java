@@ -2,6 +2,7 @@ package com.example.pagela.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,12 +38,15 @@ PacienteController pacienteController;
                 objPaciente.setEmail(edite_email.toString());
                 if(edite_senha.toString() == edite_senha2.toString()){
                     objPaciente.setSenha(edite_senha.toString());
-                }
+                }else{finish();}
                 pacienteController.incluir(objPaciente);
+                Intent intent=new Intent(Tela_Cadastro_Paciente.this, SplashScreen.class);
+                startActivity(intent);
 
 
             }
         });
+
 
 
 
