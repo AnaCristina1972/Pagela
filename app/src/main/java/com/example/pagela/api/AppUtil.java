@@ -1,5 +1,11 @@
 package com.example.pagela.api;
 
 public class AppUtil {
-    public static  final String TAG="DB_Crud";
+    public final static String TAG = "MeuApp";
+
+    public static String versaoDoApp() {
+
+        return "versão 1.0";
+
+    }
 }

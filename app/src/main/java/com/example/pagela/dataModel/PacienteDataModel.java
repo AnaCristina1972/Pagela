@@ -14,7 +14,7 @@ public class PacienteDataModel {
     public static String queryCriarTabela="";
 
     //Metodo para criar a tabela
-    public static String CriarTAbela(){
+    public static String CriarTabela(){
         queryCriarTabela+="CREATE TABLE"+TABELA+"(";
         queryCriarTabela+=ID+"integer primary key autoincrement, ";
         queryCriarTabela+=NOME+"Text, ";

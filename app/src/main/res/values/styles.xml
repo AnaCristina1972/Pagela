@@ -27,11 +27,12 @@
     </style>
     <style name="Button">
         <item name="android:background">@drawable/button</item>
-        <item name="android:layout_width" >match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width" >350dp</item>
+        <item name="android:layout_height">73dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginLeft">40dp</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+
     </style>
     <style name="Button_resposta">
         <item name="android:background">@drawable/resposta_avaliacao</item>
@@ -53,14 +54,14 @@
         <item name="android:maxLength">25</item>
     </style>
     <style name="Edit_Text1">
-        <item name="android:layout_width" >match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">73dp</item>
         <item name="android:background">@drawable/edit_text1</item>
         <item name="android:padding">20dp</item>
         <item name="layout_goneMarginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
         <item name="android:maxLength">25</item>
+        <item name="android:layout_width">350dp</item>
     </style>
 
 </resources>

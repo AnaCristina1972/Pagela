@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Tela_Perfil_do_Paciente">
+
+    <View
+        android:id="@+id/viewFotoPerfil"
+        style="@style/ContainerComponents"
+        android:layout_width="236dp"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <View
+        android:id="@+id/viewCirciloImage"
+        style="@style/componeteCircle"
+        android:layout_width="148dp"
+        android:layout_height="151dp"
+        android:background="@drawable/circle_perfil"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFotoPerfil"
+        app:layout_constraintEnd_toEndOf="@+id/viewFotoPerfil"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="@+id/viewFotoPerfil"
+        app:layout_constraintTop_toTopOf="@+id/viewFotoPerfil"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="98dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/viewCirciloImage"
+        app:layout_constraintEnd_toEndOf="@+id/viewCirciloImage"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="@+id/viewCirciloImage"
+        app:layout_constraintTop_toTopOf="@+id/viewCirciloImage"
+        app:layout_constraintVertical_bias="0.492"
+        app:srcCompat="@drawable/img_8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/imageButton"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:foregroundGravity="bottom"
+        android:text="Foto"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFotoPerfil"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <TextView
+        android:id="@+id/id_nome_user_fotoPerfil"
+        style="@style/Text_View"
+        android:layout_width="204dp"
+        android:layout_height="32dp"
+        android:text="@string/NomeUserFotoPerfil"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFotoPerfil"
+        app:layout_constraintEnd_toEndOf="@+id/viewFotoPerfil"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/viewFotoPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/viewCirciloImage"
+        app:layout_constraintVertical_bias="0.552" />
+
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/menus" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

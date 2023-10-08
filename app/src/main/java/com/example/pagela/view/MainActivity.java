@@ -2,8 +2,11 @@ package com.example.pagela.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,11 +14,14 @@ import android.widget.TextView;
 
 import com.example.pagela.Controller.PacienteController;
 import com.example.pagela.R;
+import com.example.pagela.api.AppUtil;
 import com.example.pagela.model.Paciente;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
     Paciente obj;
+    private static final String PREF_NOME="APP_SAUDE_MENTAL";
+    SharedPreferences sharedPreferences;
     PacienteController pac=new PacienteController(getApplicationContext());
     private EditText nome,email,cpf,datanasc,idade,senha, senha2;
     Button cadastra;
@@ -24,10 +30,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         getSupportActionBar().hide();
+        Log.i(AppUtil.TAG, "Oncreate Main rodando");
+        sharedPreferences=getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
+        Log.i(AppUtil.TAG, "Oncreate Pasta Shared Criada");
         iniciarComponentes();
         String[] mensagem={"Prencha todos os campos","Cadastro realizado com sucesso"};
+
         cadastra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

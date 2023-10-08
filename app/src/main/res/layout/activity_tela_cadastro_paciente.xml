@@ -9,235 +9,171 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
         tools:context=".view.Tela_Cadastro_Paciente">
-
-        <EditText
-            android:id="@+id/idade"
-            style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Data do Nascimento"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.572"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cadTextCpf"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <EditText
-            android:id="@+id/cadTextDataIdade"
-            style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="24dp"
-            android:ems="10"
-            android:hint="Idade"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.588"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idade"
-            app:layout_constraintVertical_bias="0.012" />
-
-        <EditText
-            android:id="@+id/cadTextNome2"
-            style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginBottom="300dp"
-            android:ems="10"
-            android:hint="Nome"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textOrientacao"
-            app:layout_constraintVertical_bias="0.021"
-
-            />
 
         <TextView
             android:id="@+id/identAppSaudeMental"
             style="@style/Text_View"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
             android:text="@string/identificaoLogo"
             android:textColor="@color/black"
             android:textSize="13dp"
-            app:layout_constraintBottom_toTopOf="@+id/logo1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.527"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/logo1"
-            android:layout_width="138dp"
-            android:layout_height="122dp"
-            android:src="@drawable/img_2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.071" />
 
         <TextView
             android:id="@+id/textIdent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="60dp"
             android:fontFamily="sans-serif-light"
             android:text="Criar Conta Paciente"
             android:textColor="@color/black"
             android:textSize="24dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.547"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo1"
-            app:layout_constraintVertical_bias="0.015" />
+            app:layout_constraintTop_toTopOf="@+id/identAppSaudeMental" />
+
+        <ImageView
+            android:id="@+id/logo1"
+            android:layout_width="138dp"
+            android:layout_height="122dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/img_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textIdent" />
+
 
         <TextView
             android:id="@+id/textOrientacao"
             android:layout_width="298dp"
             android:layout_height="118dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif"
             android:text="Preencha o seguinte formulário com os seus dados pessoais.
             Crie uma senha e registre uma conta de e-mail. "
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textIdent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="@+id/textIdent"
-            app:layout_constraintTop_toBottomOf="@+id/textIdent"
-            app:layout_constraintVertical_bias="0.013" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo1" />
 
         <EditText
             android:id="@+id/cadTextNome"
             style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginBottom="300dp"
             android:ems="10"
             android:hint="Nome"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
+            app:layout_constraintHorizontal_bias="0.597"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textOrientacao"
-            app:layout_constraintVertical_bias="0.021"
+            app:layout_constraintTop_toBottomOf="@+id/textOrientacao" />>
 
-            />
+        <EditText
+            android:id="@+id/cadTextCpf"
+            style="@style/Edit_Text1"
+            android:ems="10"
+            android:hint="CPF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadTextNome" />
+
+        <EditText
+            android:id="@+id/cadTextData"
+            style="@style/Edit_Text1"
+            android:ems="10"
+            android:hint="Data do Nascimento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadTextCpf" />
+
+        <EditText
+            android:id="@+id/cadTextidade"
+            style="@style/Edit_Text1"
+            android:ems="10"
+            android:hint="Idade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadTextData" />
 
 
         <EditText
             android:id="@+id/cadTextEmail"
             style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="16dp"
+            android:ems="10"
             android:hint="Email"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
+            app:layout_constraintHorizontal_bias="0.617"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cadTextNome" />
-
-        <EditText
-            android:id="@+id/cadTextCpf"
-            style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="24dp"
-            android:ems="10"
-            android:hint="CPF"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cadTextEmail"
-            app:layout_constraintVertical_bias="0.0" />
-
+            app:layout_constraintTop_toBottomOf="@+id/cadTextidade" />
 
         <EditText
             android:id="@+id/cadTexSenha"
             style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="116dp"
             android:hint="Senha"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintHorizontal_bias="0.617"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cadTextDataIdade" />
+            app:layout_constraintTop_toBottomOf="@+id/cadTextEmail" />
 
         <EditText
             android:id="@+id/cadTexConfirmarSenha"
             style="@style/Edit_Text1"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginBottom="136dp"
             android:hint="Confirmar Senha"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toTopOf="@+id/textCadastre"
-            app:layout_constraintEnd_toEndOf="@+id/cadTexSenha"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/cadTexSenha" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadTexSenha" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/buttonCriar"
             style="@style/Button"
-            android:layout_width="350dp"
-            android:layout_height="73dp"
-            android:layout_marginBottom="80dp"
             android:text="Criar"
             android:textColor="@color/white"
             android:textSize="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.572"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cadTexConfirmarSenha"
-            app:layout_constraintVertical_bias="0.037" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textCadastre"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/cadTexConfirmarSenha" />
 
         <TextView
             android:id="@+id/textCadastre"
             style="@style/Text_View"
             android:layout_width="267dp"
             android:layout_height="59dp"
-            android:layout_marginBottom="172dp"
+            android:layout_marginTop="10dp"
             android:text="@string/textTermoContrato"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="13dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCriar" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCadastre" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

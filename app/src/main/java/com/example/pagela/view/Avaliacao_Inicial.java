@@ -19,7 +19,7 @@ public class Avaliacao_Inicial extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.buttonEnviarAvaliacao);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(Avaliacao_Inicial.this,Tela_Perfil_Paciente.class);
+                Intent intent=new Intent(Avaliacao_Inicial.this,Tela_Perfil_do_Paciente.class);
                 startActivity(intent);
                 finish();
             }

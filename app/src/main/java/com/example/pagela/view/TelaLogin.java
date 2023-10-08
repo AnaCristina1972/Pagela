@@ -22,7 +22,7 @@ TextView textoCadastre;
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(TelaLogin.this, Tela_Perfil_Paciente.class);
+                Intent intent=new Intent(TelaLogin.this, Tela_Cadastro_Paciente.class);
                 startActivity(intent);
 
             }
