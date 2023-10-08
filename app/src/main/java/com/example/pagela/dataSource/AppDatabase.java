@@ -17,20 +17,21 @@ import java.util.List;
 
 public class AppDatabase extends SQLiteOpenHelper {
 
-public static final String BD= "AppSaudeMental.sqlite";
-public static final int VERSION_DB = 1;
-SQLiteDatabase db;
+    public static final String BD= "AppSaudeMental.sqlite";
+    public static final int VERSION_DB = 1;
+    SQLiteDatabase db;
     public AppDatabase(Context context) {
         super(context, BD, null, VERSION_DB);
-        Log.i(AppUtil.TAG,"AppDataBase:Crinando o Banco");
-        db=getWritableDatabase();
+        Log.d(AppUtil.TAG,"AppDataBase:Crinando o Banco");
+        db = getWritableDatabase();
+        Log.d(AppUtil.TAG,"AppDataBase Criada");
+
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+    public void onCreate(SQLiteDatabase db) {
         db.execSQL(PacienteDataModel.CriarTabela());
-        Log.d(AppUtil.TAG,"Tabela Paciente"+PacienteDataModel.CriarTabela());
+        Log.d(AppUtil.TAG,"Tabela Paciente criada"+PacienteDataModel.CriarTabela());
     }
 
     @Override
@@ -70,15 +71,15 @@ SQLiteDatabase db;
      */
     public boolean deleteById(String tabela, int id){
         db = getWritableDatabase();
-        boolean retorno = false;
+        boolean retorna = false;
         try {
-            retorno = db.delete(tabela,"id = ?",new String[] {String.valueOf(id)}) > 0;
+            retorna = db.delete(tabela,"id = ?",new String[] {String.valueOf(id)}) > 0;
 
         }catch (Exception e){
             Log.d(AppUtil.TAG, "Delete "+e.getMessage());
         }
 
-        return retorno;
+        return retorna;
     }
 
     /**

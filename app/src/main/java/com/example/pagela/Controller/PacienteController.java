@@ -23,11 +23,11 @@ public class PacienteController extends AppDatabase implements Icrud<Paciente> {
     public boolean incluir(Paciente obj) {
         dadosObjeto=new ContentValues();
         dadosObjeto.put(PacienteDataModel.NOME,obj.getNome());
-        dadosObjeto.put(PacienteDataModel.EMAIL,obj.getEmail());
         dadosObjeto.put(PacienteDataModel.CPF,obj.getCpf());
-        dadosObjeto.put(PacienteDataModel.SENHA,obj.getSenha());
         dadosObjeto.put(PacienteDataModel.DATA_NASCIMENTO,obj.getDatanascimento());
         dadosObjeto.put(PacienteDataModel.IDADE,obj.getIdade());
+        dadosObjeto.put(PacienteDataModel.EMAIL,obj.getEmail());
+        dadosObjeto.put(PacienteDataModel.SENHA,obj.getSenha());
 
         //Enviando dados pro database
 
@@ -39,11 +39,11 @@ public class PacienteController extends AppDatabase implements Icrud<Paciente> {
     public boolean alterar(Paciente obj) {
         dadosObjeto=new ContentValues();
         dadosObjeto.put(PacienteDataModel.NOME,obj.getNome());
-        dadosObjeto.put(PacienteDataModel.EMAIL,obj.getEmail());
         dadosObjeto.put(PacienteDataModel.CPF,obj.getCpf());
-        dadosObjeto.put(PacienteDataModel.SENHA,obj.getSenha());
         dadosObjeto.put(PacienteDataModel.DATA_NASCIMENTO,obj.getDatanascimento());
         dadosObjeto.put(PacienteDataModel.IDADE,obj.getIdade());
+        dadosObjeto.put(PacienteDataModel.EMAIL,obj.getEmail());
+        dadosObjeto.put(PacienteDataModel.SENHA,obj.getSenha());
         return true;
 
     }

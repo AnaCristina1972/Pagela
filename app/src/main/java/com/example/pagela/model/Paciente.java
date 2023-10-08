@@ -11,39 +11,32 @@ public class Paciente  {
     private int id;
     private String nome;
     private String cpf;
-    private String email;
-    private String senha;
     private String datanascimento;
     private String idade;
+    private String email;
+    private String senha;
+    private String senha2;
 
     //String confirmacaoSenha;
-
-
-    public String getIdade() {
-        return idade;
-    }
-
-    public void setIdade(String idade) {
-        this.idade = idade;
-    }
 
     public Paciente(int id, String nome, String cpf, String email, String senha, String datanascimento, String idade) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
-        this.email = email;
-        this.senha = senha;
         this.datanascimento = datanascimento;
         this.idade = idade;
+        this.email = email;
+        this.senha = senha;
+
     }
 
     public Paciente(String nome, String cpf, String email, String senha, String datanascimento) {
         this.nome = nome;
         this.cpf = cpf;
+        this.datanascimento = datanascimento;
         this.email = email;
         this.senha = senha;
-        this.datanascimento = datanascimento;
-    }
+         }
 
     public Paciente() {
         }
@@ -54,14 +47,6 @@ public class Paciente  {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getDatanascimento() {
-        return datanascimento;
-    }
-
-    public void setDatanascimento(String datanascimento) {
-        this.datanascimento = datanascimento;
     }
 
     public String getNome() {
@@ -80,6 +65,22 @@ public class Paciente  {
         this.cpf = cpf;
     }
 
+    public String getDatanascimento() {
+        return datanascimento;
+    }
+
+    public void setDatanascimento(String datanascimento) {
+        this.datanascimento = datanascimento;
+    }
+
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -96,4 +97,11 @@ public class Paciente  {
         this.senha = senha;
     }
 
+    public String getSenha2() {
+        return senha2;
+    }
+
+    public void setSenha2(String senha2) {
+        this.senha2 = senha2;
+    }
 }

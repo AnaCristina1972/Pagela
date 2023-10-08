@@ -16,44 +16,32 @@ import com.example.pagela.model.Paciente;
 
 public class Tela_Cadastro_Paciente extends AppCompatActivity {
 
-private EditText edite_idede,edite_nome,edite_cpf,edite_dataNascimento,edite_senha,edite_senha2,edite_email;
+private EditText edite_idede;
+    private EditText edite_nome;
+    private EditText edite_cpf;
+    private EditText edite_dataNascimento;
+    private EditText edite_senha;
+    private EditText edite_senha2;
+    private EditText edite_email;
 private Button criar;
 Paciente objPaciente;
-PacienteController pacienteController;
+PacienteController pacienteController= new PacienteController(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro_paciente);
         getSupportActionBar().hide();
         iniciarComponentes();
-        Log.i(AppUtil.TAG,"onCreate: App database");
-        objPaciente=new Paciente();
+        Log.i(AppUtil.TAG,"onCreate: PacienteController");
+
         criar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                objPaciente.setNome(edite_nome.toString());
-                objPaciente.setCpf(edite_cpf.toString());
-                objPaciente.setDatanascimento(edite_dataNascimento.toString());
-                objPaciente.setIdade(edite_idede.toString());
-                objPaciente.setEmail(edite_email.toString());
-                if(edite_senha.toString() == edite_senha2.toString()){
-                    objPaciente.setSenha(edite_senha.toString());
-                }else{finish();}
-                pacienteController.incluir(objPaciente);
-                Intent intent=new Intent(Tela_Cadastro_Paciente.this, SplashScreen.class);
+
+                Intent intent=new Intent(Tela_Cadastro_Paciente.this, Avaliacao_Inicial.class);
                 startActivity(intent);
-
-
             }
         });
-
-
-
-
-
-
-
-
     }
     private void iniciarComponentes(){
         edite_nome=(EditText) findViewById(R.id.cadTextNome);
@@ -65,5 +53,7 @@ PacienteController pacienteController;
         edite_senha2=(EditText) findViewById(R.id.cadTexConfirmarSenha);
         criar=(Button) findViewById(R.id.buttonCriar);
     }
+
+
 
 }
