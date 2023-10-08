@@ -13,4 +13,4 @@ App com o objetivo de proporcionar aos usuários uma ferramenta para melhorar su
 
 # Video do App Saude Mental
 
-[![Vídeo de demonstração][(https://github.com/AnaCristina1972/Pagela/blob/master/VideoDoApp/17-47-21.mp4)
+[!Vídeo de demonstração](https://github.com/AnaCristina1972/Pagela/blob/master/VideoDoApp/19-40-42.mp4)
